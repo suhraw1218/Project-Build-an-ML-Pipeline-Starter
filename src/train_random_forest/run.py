@@ -219,7 +219,7 @@ def get_inference_pipeline(rf_config, max_tfidf_features):
     processed_features = ordinal_categorical + non_ordinal_categorical + zero_imputed + ["last_review", "name"]
 
     # Create random forest
-    random_forest = RandomForestRegressor()
+    random_forest = RandomForestRegressor()#removing **rf_config as this causes errors saying RadomForestRegressor gets mae.
 
     ######################################
     # Create the inference pipeline. The pipeline must have 2 steps: 
